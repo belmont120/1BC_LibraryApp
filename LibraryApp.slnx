@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="libraryapp.client/libraryapp.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="LibraryApp.Server.Application/LibraryApp.Server.Application.csproj" />
+  <Project Path="LibraryApp.Server.Domain/LibraryApp.Server.Domain.csproj" />
+  <Project Path="LibraryApp.Server.Infrastructure/LibraryApp.Server.Infrastructure.csproj" />
+  <Project Path="LibraryApp.Server/LibraryApp.Server.csproj" />
+</Solution>

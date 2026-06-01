@@ -1,0 +1,30 @@
+@LibraryApp.Server_HostAddress = http://localhost:5203
+
+GET {{LibraryApp.Server_HostAddress}}/api/books
+Accept: application/json
+
+###
+POST {{LibraryApp.Server_HostAddress}}/api/books
+Content-Type: application/json
+
+{
+  "title": "Test Book abc",
+  "owner": "Tester"
+}
+
+###
+@BookId = 209b3f02-0f72-4a52-a813-3a63f101ec2e
+POST {{LibraryApp.Server_HostAddress}}/api/books/{{BookId}}/borrow
+Content-Type: application/json
+
+
+###
+@BookId = 209b3f02-0f72-4a52-a813-3a63f101ec2e
+POST {{LibraryApp.Server_HostAddress}}/api/books/{{BookId}}/return
+Content-Type: application/json
+
+
+###
+@BookId = 209b3f02-0f72-4a52-a813-3a63f101ec2e
+DELETE {{LibraryApp.Server_HostAddress}}/api/books/{{BookId}}
+Content-Type: application/json
